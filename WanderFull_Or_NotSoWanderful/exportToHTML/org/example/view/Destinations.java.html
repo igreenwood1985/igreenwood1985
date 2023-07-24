@@ -1,0 +1,386 @@
+<html>
+<head>
+<title>Destinations.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cc7832;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #808080;}
+.s3 { color: #6a8759;}
+.s4 { color: #6897bb;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Destinations.java</font>
+</center></td></tr></table>
+<pre><span class="s0">package </span><span class="s1">org.example.view</span><span class="s0">;</span>
+
+<span class="s0">import </span><span class="s1">java.util.Locale</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">java.util.Scanner</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">org.example.view.PromptMenu</span><span class="s0">;</span>
+
+<span class="s0">public class </span><span class="s1">Destinations {</span>
+    <span class="s2">// This class contains all of the different scenarios for destinations that are hard-coded into the program,</span>
+    <span class="s2">// to be called as methods in the class &quot;Main&quot;</span>
+
+    <span class="s2">// Variable Declarations</span>
+
+    <span class="s0">int </span><span class="s1">tourNumber</span><span class="s0">;</span>
+    <span class="s1">Scanner sc = </span><span class="s0">new </span><span class="s1">Scanner(System.in)</span><span class="s0">;</span>
+    <span class="s1">String choice</span><span class="s0">;</span>
+
+    <span class="s0">boolean </span><span class="s1">isAtAirport = </span><span class="s0">true;</span>
+    <span class="s0">boolean </span><span class="s1">noWay</span><span class="s0">;</span>
+    <span class="s0">boolean </span><span class="s1">isDayTwo = </span><span class="s0">true;</span>
+
+    <span class="s1">PromptMenu promptMessage = </span><span class="s0">new </span><span class="s1">PromptMenu()</span><span class="s0">;</span>
+
+    <span class="s2">//Class Constructor</span>
+    <span class="s0">public </span><span class="s1">Destinations(){</span>
+
+    <span class="s1">}</span>
+
+
+
+    <span class="s2">// Currently the only partially complete storyline</span>
+    <span class="s0">public void </span><span class="s1">adventureManila() {</span>
+        <span class="s1">System.out.println(</span><span class="s3">&quot;You have landed in Manila!&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">System.out.println(</span><span class="s3">&quot; &quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">System.out.println(</span><span class="s3">&quot;You have exited the terminal at Nino-Acquinoy Inernational Airport&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">System.out.println(</span><span class="s3">&quot; &quot;</span><span class="s1">)</span><span class="s0">;</span>
+
+        <span class="s0">while </span><span class="s1">(isAtAirport == </span><span class="s0">true</span><span class="s1">) {</span>
+
+
+            <span class="s1">System.out.println(</span><span class="s3">&quot;You see a taxi.&quot;</span><span class="s1">)</span><span class="s0">;</span>
+            <span class="s1">System.out.println(</span><span class="s3">&quot;The driver wants 2100 pesos to take you to your hotel&quot;</span><span class="s1">)</span><span class="s0">;</span>
+            <span class="s1">System.out.print(</span><span class="s3">&quot;Do you agree to the fare (y/n)? &quot;</span><span class="s1">)</span><span class="s0">;</span>
+            <span class="s1">choice = sc.nextLine()</span><span class="s0">;</span>
+
+            <span class="s0">if </span><span class="s1">(choice.toLowerCase().equals(</span><span class="s3">&quot;y&quot;</span><span class="s1">)) {</span>
+                <span class="s1">System.out.println(</span><span class="s3">&quot;You got to your hotel, but the bellhop tells you that you were scammed.&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                <span class="s1">System.out.println(</span><span class="s3">&quot;Your bellhop tells you to download Grab, the local equivalent to Uber.&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                <span class="s1">System.out.println(</span><span class="s3">&quot;When you see that you could have gotten to your hotel for less than 300 pesos,&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                <span class="s1">System.out.println(</span><span class="s3">&quot;your heart literally stops. LITERALLY... YOU NEED TO WATCH YOUR CHOLESTEROL!&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                <span class="s1">System.out.println(</span><span class="s3">&quot;You wake up 3 days later in intensive care at the nearest hospital. You find out that the bill&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                <span class="s1">System.out.println(</span><span class="s3">&quot;is 150,000 pesos, but you only planned to stay in Manila for a few days and brought 50,000.&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                <span class="s1">System.out.println(</span><span class="s3">&quot;The Money is gone anyway. Someone at the scene of your collapse took a liking to your valuables.&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                <span class="s1">System.out.println(</span><span class="s3">&quot;Your wallet, all of its contents, your smart-phone, and all of your luggage are nowhere to be found.&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                <span class="s1">System.out.println(</span><span class="s3">&quot;The hospital holds you until you can pay the bill, which you can't, so they keep holding you.&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                <span class="s1">System.out.println(</span><span class="s3">&quot;You are charged and additional 30,000 pesos per day. Eventually they discharge you to the police.&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                <span class="s1">System.out.println(</span><span class="s3">&quot;You are allowed a phone call home. Your very frustrated uncle cleans out his bank-account&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                <span class="s1">System.out.println(</span><span class="s3">&quot;to pay all the bills that you owe.&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                <span class="s1">System.out.println(</span><span class="s3">&quot;Having made a monkey's-uncle of your uncle, you now have to catch the overpriced flight he was forced to buy for you, &quot;</span><span class="s1">)</span><span class="s0">;</span>
+                <span class="s1">System.out.println(</span><span class="s3">&quot;and now you have to go home and prostrate yourself before him in front of the relatives you normally avoid.&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                <span class="s1">System.out.println(</span><span class="s3">&quot; &quot;</span><span class="s1">)</span><span class="s0">;</span>
+                <span class="s1">System.out.println(</span><span class="s3">&quot;GAME OVER&quot;</span><span class="s1">)</span><span class="s0">;</span>
+
+                <span class="s1">System.exit(</span><span class="s4">0</span><span class="s1">)</span><span class="s0">;</span>
+
+            <span class="s1">} </span><span class="s0">else </span><span class="s1">{</span>
+                <span class="s1">System.out.println(</span><span class="s3">&quot; &quot;</span><span class="s1">)</span><span class="s0">;</span>
+                <span class="s1">System.out.println(</span><span class="s3">&quot;You see an ad for Grab, the local equivalent of Uber, and download it.&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                <span class="s1">System.out.println(</span><span class="s3">&quot;When you look at the booking options to your hotel, you see a ride for 300 pesos.&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                <span class="s1">System.out.print(</span><span class="s3">&quot;Do you wish to book the ride (y/n)?&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                <span class="s1">choice = sc.nextLine()</span><span class="s0">;</span>
+
+                <span class="s0">if </span><span class="s1">(choice.toLowerCase().equals(</span><span class="s3">&quot;y&quot;</span><span class="s1">)) {</span>
+                    <span class="s1">System.out.println(</span><span class="s3">&quot; &quot;</span><span class="s1">)</span><span class="s0">;</span>
+                    <span class="s1">System.out.println(</span><span class="s3">&quot;You arrive at the Savoy Hotel of Manila. It is truly a high-class experience and you are impressed &quot;</span><span class="s1">)</span><span class="s0">;</span>
+                    <span class="s1">System.out.println(</span><span class="s3">&quot;That the nightly-rate is only about as high as you might expect from a roach-infested motel in the USA.&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                    <span class="s1">System.out.println(</span><span class="s3">&quot;It also turns out to have an awesome but super-cheap breakfast-buffet&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                    <span class="s1">System.out.println(</span><span class="s3">&quot;You start the next day out rested and refreshed. Now it is time to decide what to do with your day...&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                    <span class="s1">System.out.println(</span><span class="s3">&quot; &quot;</span><span class="s1">)</span><span class="s0">;</span>
+                    <span class="s1">isAtAirport = </span><span class="s0">false;</span>
+                <span class="s1">} </span><span class="s0">else </span><span class="s1">{</span>
+                    <span class="s1">isAtAirport = </span><span class="s0">true;</span>
+                <span class="s1">}</span>
+
+
+            <span class="s1">}</span>
+        <span class="s1">}</span>
+
+            <span class="s1">tourNumber = </span><span class="s4">0</span><span class="s0">;</span>
+            <span class="s0">while </span><span class="s1">(isDayTwo == </span><span class="s0">true</span><span class="s1">) {</span>
+
+                <span class="s1">System.out.print(</span><span class="s3">&quot;Where would you like to explore?&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                <span class="s1">System.out.println(</span><span class="s3">&quot; &quot;</span><span class="s1">)</span><span class="s0">;</span>
+
+                <span class="s1">System.out.println(</span><span class="s3">&quot;1) The Intramuros - 500-year-old Historic Walled City, center of former colonial governments with classic Spanish architecture.&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                <span class="s1">System.out.println(</span><span class="s3">&quot;2) SM Mall of Asia - The world's 4th largest shopping mall.&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                <span class="s1">System.out.println(</span><span class="s3">&quot;3) Manila Chinatown - The world's oldest Chinatown.&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                <span class="s1">System.out.println(</span><span class="s3">&quot;4) Manila Ocean Park.&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                <span class="s1">System.out.println(</span><span class="s3">&quot;5) Divisoria Public Market - a colossal flea market where most of the locals shop.&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                <span class="s1">System.out.println(</span><span class="s3">&quot; &quot;</span><span class="s1">)</span><span class="s0">;</span>
+
+                <span class="s0">if </span><span class="s1">(tourNumber &lt; </span><span class="s4">2</span><span class="s1">) {</span>
+                    <span class="s1">System.out.println(</span><span class="s3">&quot; &quot;</span><span class="s1">)</span><span class="s0">;</span>
+                    <span class="s1">System.out.print(</span><span class="s3">&quot;Please enter your choice: &quot;</span><span class="s1">)</span><span class="s0">;</span>
+                    <span class="s1">choice = sc.nextLine()</span><span class="s0">;</span>
+                    <span class="s1">tourNumber++</span><span class="s0">;</span>
+                <span class="s1">} </span><span class="s0">else </span><span class="s1">{</span>
+                    <span class="s1">System.out.println(</span><span class="s3">&quot; &quot;</span><span class="s1">)</span><span class="s0">;</span>
+                    <span class="s1">System.out.println(</span><span class="s3">&quot;Opps, it's already the end of the day! It will have to wait until tomorrow.&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                    <span class="s1">isDayTwo = </span><span class="s0">false;</span>
+                <span class="s1">}</span>
+
+
+                <span class="s0">if </span><span class="s1">(choice.equals(</span><span class="s3">&quot;1&quot;</span><span class="s1">)) {</span>
+                    <span class="s1">System.out.println(</span><span class="s3">&quot;You are off to the Intramuros!&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                    <span class="s1">System.out.println(</span><span class="s3">&quot; &quot;</span><span class="s1">)</span><span class="s0">;</span>
+                    <span class="s1">System.out.println(</span><span class="s3">&quot;You cling to dear life as your Grab driver swerves through Manila traffic, which is &quot;</span><span class="s1">)</span><span class="s0">;</span>
+                    <span class="s1">System.out.println(</span><span class="s3">&quot;the most psychotic thing you have ever seen, aside perhaps from your aunt's rescue cat.&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                    <span class="s1">System.out.println(</span><span class="s3">&quot;The sheer volume of motorcycles, tricycles, jeepneys, cars and utiity vehicles&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                    <span class="s1">System.out.println(</span><span class="s3">&quot;all trying to push each-other out of the way both nauseats you and makes you wonder if this &quot;</span><span class="s1">)</span><span class="s0">;</span>
+                    <span class="s1">System.out.println(</span><span class="s3">&quot;place even has traffic laws. just as you are about to lose your final nerve and vomit from &quot;</span><span class="s1">)</span><span class="s0">;</span>
+                    <span class="s1">System.out.println(</span><span class="s3">&quot;the dizzying array of motion and close-calls, you arrive at the Intramuros.&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                    <span class="s1">System.out.println(</span><span class="s3">&quot; &quot;</span><span class="s1">)</span><span class="s0">;</span>
+
+                    <span class="s1">System.out.println(</span><span class="s3">&quot;You step out of the Grab in front of the Minor Basilica and Metropolitan Cathedral of the Immaculate Conception,&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                    <span class="s1">System.out.println(</span><span class="s3">&quot;also known as the Manila Cathedral.&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                    <span class="s1">System.out.println(</span><span class="s3">&quot;Not 30 seconds passes and a man driving a pedal-coach offers to be your tour-guide.&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                    <span class="s1">System.out.println(</span><span class="s3">&quot;He is a little too outgoing but seems to know his way around. He offers to be your guide for &quot;</span><span class="s1">)</span><span class="s0">;</span>
+                    <span class="s1">System.out.println(</span><span class="s3">&quot;700 pesos.&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                    <span class="s1">System.out.print(</span><span class="s3">&quot;Will you hire him (y/n)&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                    <span class="s1">choice = sc.nextLine()</span><span class="s0">;</span>
+
+                    <span class="s0">if </span><span class="s1">(choice.toLowerCase().equals(</span><span class="s3">&quot;y&quot;</span><span class="s1">)) {</span>
+                        <span class="s1">System.out.println(</span><span class="s3">&quot;The fellow does indeed seem to know his way around and does a pretty good job of showing &quot;</span><span class="s1">)</span><span class="s0">;</span>
+                        <span class="s1">System.out.println(</span><span class="s3">&quot;you all of the highlights of the old walled-city. You see the oldest Cathedral in the Philippines, &quot;</span><span class="s1">)</span><span class="s0">;</span>
+                        <span class="s1">System.out.println(</span><span class="s3">&quot;Rizal park, the Japanese occupation government's headquarters, General Douglass MacArthur's personal, &quot;</span><span class="s1">)</span><span class="s0">;</span>
+                        <span class="s1">System.out.println(</span><span class="s3">&quot;golf course, and innumerable other sites. You lose track of time as you are taking it all in and, &quot;</span><span class="s1">)</span><span class="s0">;</span>
+                        <span class="s1">System.out.println(</span><span class="s3">&quot;before you know it, the tour took 3 hours.&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                        <span class="s1">System.out.println(</span><span class="s3">&quot;You tell the tour-guide you are finished and he says you owe him 4200 pesos.&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                        <span class="s1">System.out.println(</span><span class="s3">&quot;You are flabbergasted, and remind him that he said upfront it was 700 pesos for the tour.&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                        <span class="s1">System.out.println(</span><span class="s3">&quot;He says 'NO! It is 700 pesos for every 30 minutes.' After you ague with him, he says he will be &quot;</span><span class="s1">)</span><span class="s0">;</span>
+                        <span class="s1">System.out.println(</span><span class="s3">&quot;generous and give you a discount. He says you have to pay him 2100 pesos.&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                        <span class="s1">System.out.println(</span><span class="s3">&quot; &quot;</span><span class="s1">)</span><span class="s0">;</span>
+                        <span class="s1">System.out.println(</span><span class="s3">&quot;What will you do?&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                        <span class="s1">System.out.println(</span><span class="s3">&quot; &quot;</span><span class="s1">)</span><span class="s0">;</span>
+                        <span class="s1">System.out.println(</span><span class="s3">&quot;1) Give him 700 pesos&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                        <span class="s1">System.out.println(</span><span class="s3">&quot;2) Give him what he is asking?&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                        <span class="s1">System.out.println(</span><span class="s3">&quot; &quot;</span><span class="s1">)</span><span class="s0">;</span>
+                        <span class="s1">System.out.println(</span><span class="s3">&quot;Please select your choice: &quot;</span><span class="s1">)</span><span class="s0">;</span>
+
+                        <span class="s1">choice = sc.nextLine()</span><span class="s0">;</span>
+
+                        <span class="s0">if </span><span class="s1">(choice.equals(</span><span class="s3">&quot;1&quot;</span><span class="s1">)) {</span>
+                            <span class="s1">System.out.println(</span><span class="s3">&quot;You get into a long, loud argument with the guy and he threatens to kill you.&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                            <span class="s1">System.out.println(</span><span class="s3">&quot;You brush off the threat and start walking back towards your hotel. As you claw &quot;</span><span class="s1">)</span><span class="s0">;</span>
+                            <span class="s1">System.out.println(</span><span class="s3">&quot;your way through narrow alleys, aggressive street hustlers and psychotic traffic, &quot;</span><span class="s1">)</span><span class="s0">;</span>
+                            <span class="s1">System.out.println(</span><span class="s3">&quot;the previously winsome and charming tour-guide becomes a relentless beast, &quot;</span><span class="s1">)</span><span class="s0">;</span>
+                            <span class="s1">System.out.println(</span><span class="s3">&quot;following you the entire way and hurling a greater array of more creative and disgusting&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                            <span class="s1">System.out.println(</span><span class="s3">&quot;curses than you have ever heard in your life before now, as passers-by look on with morbid expressions &quot;</span><span class="s1">)</span><span class="s0">;</span>
+                            <span class="s1">System.out.println(</span><span class="s3">&quot;on their faces. He follows you straight up to the front-door of your hotel, where you finally get &quot;</span><span class="s1">)</span><span class="s0">;</span>
+                            <span class="s1">System.out.println(</span><span class="s3">&quot;him off your back as the security guard stops him.&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                            <span class="s1">System.out.println(</span><span class="s3">&quot; &quot;</span><span class="s1">)</span><span class="s0">;</span>
+                            <span class="s1">System.out.println(</span><span class="s3">&quot;After hiding in your hotel for the rest of the day and night, you start a new day. After breakfast &quot;</span><span class="s1">)</span><span class="s0">;</span>
+                            <span class="s1">System.out.println(</span><span class="s3">&quot;at that awesome breakfast buffet, you step out of the front door of the hotel to hail a Grab.&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                            <span class="s1">System.out.println(</span><span class="s3">&quot;Within 2 minutes you hear a too-familiar voice coming your way.&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                            <span class="s1">System.out.println(</span><span class="s3">&quot;The maniac tour-guide is still here!&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                            <span class="s1">System.out.println(</span><span class="s3">&quot; &quot;</span><span class="s1">)</span><span class="s0">;</span>
+                            <span class="s1">System.out.println(</span><span class="s3">&quot;You run back to your hotel, dodging a couple stones he throws at you along the way, and he turns around&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                            <span class="s1">System.out.println(</span><span class="s3">&quot;and runs off after the security guard runs out of the front door to chase him.&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                            <span class="s1">System.out.println(</span><span class="s3">&quot;You realize that you made a crazy friend yesterday and now you need to get away.&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                            <span class="s1">System.out.println(</span><span class="s3">&quot;This trip has cost you enough, so you don't buy a new plane ticket&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                            <span class="s1">System.out.println(</span><span class="s3">&quot;You hide in your hotel for a few more days&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                            <span class="s1">System.out.println(</span><span class="s3">&quot;On the final day, you step outside with your luggage and hail a Grab.&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                            <span class="s1">System.out.println(</span><span class="s3">&quot;Your crazy friend is there, and he is making a beeline for you just as the Grab arrives.&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                            <span class="s1">System.out.println(</span><span class="s3">&quot; &quot;</span><span class="s1">)</span><span class="s0">;</span>
+                            <span class="s1">System.out.println(</span><span class="s3">&quot;You hurl yourself into the car with your luggage and the driver hits the gas as the maniac is &quot;</span><span class="s1">)</span><span class="s0">;</span>
+                            <span class="s1">System.out.println(</span><span class="s3">&quot;pounding on the car windows. You are away! You make it to the airport!&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                            <span class="s1">System.out.println(</span><span class="s3">&quot;But your vacation was wasted hiding from your new fan.&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                            <span class="s1">System.out.println(</span><span class="s3">&quot; &quot;</span><span class="s1">)</span><span class="s0">;</span>
+                            <span class="s1">System.out.println(</span><span class="s3">&quot;GAME OVER&quot;</span><span class="s1">)</span><span class="s0">;</span>
+
+                            <span class="s1">System.exit(</span><span class="s4">0</span><span class="s1">)</span><span class="s0">;</span>
+                        <span class="s1">} </span><span class="s0">else </span><span class="s1">{</span>
+                            <span class="s1">System.out.println(</span><span class="s3">&quot;Well... you know you got scammed, but you probably also avoided a lot of additional problems.&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                            <span class="s1">System.out.println(</span><span class="s3">&quot;The security guard confirms that it was wise to pay the man when you get back to the hotel and chat with him.&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                            <span class="s1">System.out.println(</span><span class="s3">&quot;He then talks about how other guests had been harassed by an extremely maniacal beggar who often played as a tour-guide&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                            <span class="s1">System.out.println(</span><span class="s3">&quot;at the Intramuros, You are in no mood to go back out, so you stay in for the rest of the night. Better to avoid more trouble...&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                            <span class="s1">System.out.println(</span><span class="s3">&quot;Tomorrow will be a new day...&quot;</span><span class="s1">)</span><span class="s0">;</span>
+
+                            <span class="s1">isDayTwo = </span><span class="s0">false;</span>
+                        <span class="s1">}</span>
+                    <span class="s1">} </span><span class="s0">else </span><span class="s1">{</span>
+
+                        <span class="s2">// This is the one successful outcome that exists for now.</span>
+                        <span class="s1">System.out.println(</span><span class="s3">&quot;Getting around the Intramuros by yourself goes a bit slowly. It takes you several hours&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                        <span class="s1">System.out.println(</span><span class="s3">&quot;However you manage to google enough information on your smartphone to make it work.&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                        <span class="s1">System.out.println(</span><span class="s3">&quot;You go into the Manila Cathedral first, because it is right there in front of you.&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                        <span class="s1">System.out.println(</span><span class="s3">&quot;After capturing some of the stunning Basilica outwork and statuary, you head to other sites.&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                        <span class="s1">System.out.println(</span><span class="s3">&quot;You see Rizal park, and read about the legacy of Jose Rizal, the first martyr of the&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                        <span class="s1">System.out.println(</span><span class="s3">&quot;Philippine Revolution for Independence from Spain. You find the US Governor-General's headquarters&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                        <span class="s1">System.out.println(</span><span class="s3">&quot;and walk upon General Douglass MacArthur's personal golf course and imagine him coming out to golf,&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                        <span class="s1">System.out.println(</span><span class="s3">&quot;every day at about the time you happen to be there now.&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                        <span class="s1">System.out.println(</span><span class="s3">&quot;You see the bullet holes in the sides of the fortifications, the signs of battles thar were fought long-ago,&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                        <span class="s1">System.out.println(</span><span class="s3">&quot;and the weight of the history behind this place starts to hit you.&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                        <span class="s1">System.out.println(</span><span class="s3">&quot;After taking it all in, you decide it is time to leave so that you can process all of it.&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                        <span class="s1">System.out.println(</span><span class="s3">&quot;You walk back to the Manila Cathedral and you hail a Grab.&quot;</span><span class="s1">)</span><span class="s0">;</span>
+
+                        <span class="s2">// Temporary end code until more of the story is fleshed out in the future.</span>
+                        <span class="s1">System.out.println(</span><span class="s3">&quot; &quot;</span><span class="s1">)</span><span class="s0">;</span>
+                        <span class="s1">System.out.println(</span><span class="s3">&quot;To be continued...&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                        <span class="s1">System.out.println(</span><span class="s3">&quot; &quot;</span><span class="s1">)</span><span class="s0">;</span>
+                        <span class="s1">System.out.println(</span><span class="s3">&quot;Thanks for playing!&quot;</span><span class="s1">)</span><span class="s0">;</span>
+
+                        <span class="s1">System.exit(</span><span class="s4">0</span><span class="s1">)</span><span class="s0">;</span>
+                    <span class="s1">}</span>
+                    <span class="s1">System.out.println(</span><span class="s3">&quot;Would you like to explore somewhere else (y/n)? &quot;</span><span class="s1">)</span><span class="s0">;</span>
+                    <span class="s1">choice = sc.nextLine()</span><span class="s0">;</span>
+
+
+                    <span class="s0">if </span><span class="s1">(choice.toLowerCase().equals(</span><span class="s3">&quot;y&quot;</span><span class="s1">)) {</span>
+                        <span class="s1">isDayTwo = </span><span class="s0">true;</span>
+                    <span class="s1">} </span><span class="s0">else </span><span class="s1">{</span>
+                        <span class="s1">isDayTwo = </span><span class="s0">false;</span>
+                    <span class="s1">}</span>
+                <span class="s1">} </span><span class="s0">else if </span><span class="s1">(choice.equals(</span><span class="s3">&quot;2&quot;</span><span class="s1">)) {</span>
+                    <span class="s2">// SM Mall of Asia storyline</span>
+                    <span class="s1">promptMessage.unavailableNotice()</span><span class="s0">;</span>
+                    <span class="s1">System.exit(</span><span class="s4">0</span><span class="s1">)</span><span class="s0">;</span>
+
+                    <span class="s1">System.out.println(</span><span class="s3">&quot;SM Mall of Asia, here we come!&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                    <span class="s1">System.out.println(</span><span class="s3">&quot; &quot;</span><span class="s1">)</span><span class="s0">;</span>
+                    <span class="s1">System.out.println(</span><span class="s3">&quot;Would you like to explore somewhere else (y/n)? &quot;</span><span class="s1">)</span><span class="s0">;</span>
+                    <span class="s1">choice = sc.nextLine()</span><span class="s0">;</span>
+
+
+                    <span class="s0">if </span><span class="s1">(choice.toLowerCase().equals(</span><span class="s3">&quot;y&quot;</span><span class="s1">)) {</span>
+                        <span class="s1">isDayTwo = </span><span class="s0">true;</span>
+                    <span class="s1">} </span><span class="s0">else </span><span class="s1">{</span>
+                        <span class="s1">isDayTwo = </span><span class="s0">false;</span>
+                    <span class="s1">}</span>
+                <span class="s1">} </span><span class="s0">else if </span><span class="s1">(choice.equals(</span><span class="s3">&quot;3&quot;</span><span class="s1">)) {</span>
+                    <span class="s2">// Manila Chinatown storyline</span>
+                    <span class="s1">promptMessage.unavailableNotice()</span><span class="s0">;</span>
+                    <span class="s1">System.exit(</span><span class="s4">0</span><span class="s1">)</span><span class="s0">;</span>
+
+                    <span class="s1">System.out.println(</span><span class="s3">&quot;Time for some awesome Chinese street food!&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                    <span class="s1">System.out.println(</span><span class="s3">&quot; &quot;</span><span class="s1">)</span><span class="s0">;</span>
+                    <span class="s1">System.out.println(</span><span class="s3">&quot;Would you like to explore somewhere else (y/n)? &quot;</span><span class="s1">)</span><span class="s0">;</span>
+                    <span class="s1">choice = sc.nextLine()</span><span class="s0">;</span>
+
+
+                    <span class="s0">if </span><span class="s1">(choice.toLowerCase().equals(</span><span class="s3">&quot;y&quot;</span><span class="s1">)) {</span>
+                        <span class="s1">isDayTwo = </span><span class="s0">true;</span>
+                    <span class="s1">} </span><span class="s0">else </span><span class="s1">{</span>
+                        <span class="s1">isDayTwo = </span><span class="s0">false;</span>
+                    <span class="s1">}</span>
+                <span class="s1">} </span><span class="s0">else if </span><span class="s1">(choice.equals(</span><span class="s3">&quot;4&quot;</span><span class="s1">)) {</span>
+                    <span class="s2">//Manila Ocean-park Storyline</span>
+                    <span class="s1">promptMessage.unavailableNotice()</span><span class="s0">;</span>
+                    <span class="s1">System.exit(</span><span class="s4">0</span><span class="s1">)</span><span class="s0">;</span>
+
+                    <span class="s1">System.out.println(</span><span class="s3">&quot;Great! Let's see some of the local sea-life!&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                    <span class="s1">System.out.println(</span><span class="s3">&quot; &quot;</span><span class="s1">)</span><span class="s0">;</span>
+                    <span class="s1">System.out.println(</span><span class="s3">&quot;Would you like to explore somewhere else (y/n)? &quot;</span><span class="s1">)</span><span class="s0">;</span>
+                    <span class="s1">choice = sc.nextLine()</span><span class="s0">;</span>
+
+
+                    <span class="s0">if </span><span class="s1">(choice.toLowerCase().equals(</span><span class="s3">&quot;y&quot;</span><span class="s1">)) {</span>
+                        <span class="s1">isDayTwo = </span><span class="s0">true;</span>
+                    <span class="s1">} </span><span class="s0">else </span><span class="s1">{</span>
+                        <span class="s1">isDayTwo = </span><span class="s0">false;</span>
+                    <span class="s1">}</span>
+                <span class="s1">} </span><span class="s0">else if </span><span class="s1">(choice.equals(</span><span class="s3">&quot;5&quot;</span><span class="s1">)) {</span>
+                    <span class="s2">// Public Market storyline</span>
+                    <span class="s1">promptMessage.unavailableNotice()</span><span class="s0">;</span>
+                    <span class="s1">System.exit(</span><span class="s4">0</span><span class="s1">)</span><span class="s0">;</span>
+
+                    <span class="s1">System.out.println(</span><span class="s3">&quot;Time to find some awesome deals!&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                    <span class="s1">System.out.println(</span><span class="s3">&quot; &quot;</span><span class="s1">)</span><span class="s0">;</span>
+                    <span class="s1">System.out.println(</span><span class="s3">&quot;Would you like to explore somewhere else (y/n)? &quot;</span><span class="s1">)</span><span class="s0">;</span>
+                    <span class="s1">choice = sc.nextLine()</span><span class="s0">;</span>
+
+
+                    <span class="s0">if </span><span class="s1">(choice.toLowerCase().equals(</span><span class="s3">&quot;y&quot;</span><span class="s1">)) {</span>
+                        <span class="s1">isDayTwo = </span><span class="s0">true;</span>
+                    <span class="s1">} </span><span class="s0">else </span><span class="s1">{</span>
+                        <span class="s1">isDayTwo = </span><span class="s0">false;</span>
+                    <span class="s1">}</span>
+                <span class="s1">}</span>
+
+
+            <span class="s1">}</span>
+
+    <span class="s1">}</span>
+
+
+
+    <span class="s0">public void </span><span class="s1">adventureSingapore(){</span>
+        <span class="s2">// Singapore storyline</span>
+        <span class="s1">promptMessage.unavailableNotice()</span><span class="s0">;</span>
+        <span class="s1">System.exit(</span><span class="s4">0</span><span class="s1">)</span><span class="s0">;</span>
+
+        <span class="s1">System.out.println(</span><span class="s3">&quot;You have landed in Singapore!&quot;</span><span class="s1">)</span><span class="s0">;</span>
+    <span class="s1">}</span>
+
+    <span class="s0">public void </span><span class="s1">adventureKualaLumpur(){</span>
+        <span class="s2">// Kuala Lumpur storyline</span>
+        <span class="s1">promptMessage.unavailableNotice()</span><span class="s0">;</span>
+        <span class="s1">System.exit(</span><span class="s4">0</span><span class="s1">)</span><span class="s0">;</span>
+
+        <span class="s1">System.out.println(</span><span class="s3">&quot;You chose Kuala Lumpur!&quot;</span><span class="s1">)</span><span class="s0">;</span>
+    <span class="s1">}</span>
+
+    <span class="s0">public void </span><span class="s1">adventureTokyo(){</span>
+        <span class="s2">// Tokyo storyline</span>
+
+        <span class="s1">promptMessage.unavailableNotice()</span><span class="s0">;</span>
+        <span class="s1">System.exit(</span><span class="s4">0</span><span class="s1">)</span><span class="s0">;</span>
+
+        <span class="s1">System.out.println(</span><span class="s3">&quot;You chose Tokyo!&quot;</span><span class="s1">)</span><span class="s0">;</span>
+    <span class="s1">}</span>
+
+    <span class="s0">public void </span><span class="s1">adventureTaipei(){</span>
+        <span class="s2">// Taipei storyline</span>
+
+        <span class="s1">promptMessage.unavailableNotice()</span><span class="s0">;</span>
+        <span class="s1">System.exit(</span><span class="s4">0</span><span class="s1">)</span><span class="s0">;</span>
+
+        <span class="s1">System.out.println(</span><span class="s3">&quot;You chose Taipei!&quot;</span><span class="s1">)</span><span class="s0">;</span>
+    <span class="s1">}</span>
+
+    <span class="s0">public void </span><span class="s1">adventureBangkok(){</span>
+        <span class="s2">// Bangkok storyline</span>
+
+        <span class="s1">promptMessage.unavailableNotice()</span><span class="s0">;</span>
+        <span class="s1">System.exit(</span><span class="s4">0</span><span class="s1">)</span><span class="s0">;</span>
+
+        <span class="s1">System.out.println(</span><span class="s3">&quot;You chose Bangkok!&quot;</span><span class="s1">)</span><span class="s0">;</span>
+    <span class="s1">}</span>
+
+    <span class="s0">public void </span><span class="s1">adventureHanoi(){</span>
+        <span class="s2">// Hanoi storyline</span>
+        <span class="s1">promptMessage.unavailableNotice()</span><span class="s0">;</span>
+        <span class="s1">System.exit(</span><span class="s4">0</span><span class="s1">)</span><span class="s0">;</span>
+
+        <span class="s1">System.out.println(</span><span class="s3">&quot;You chose Hanoi!&quot;</span><span class="s1">)</span><span class="s0">;</span>
+    <span class="s1">}</span>
+
+    <span class="s0">public void </span><span class="s1">adventureSiemReap(){</span>
+        <span class="s2">//Siem Reap Angkor-Wat story line</span>
+        <span class="s1">promptMessage.unavailableNotice()</span><span class="s0">;</span>
+        <span class="s1">System.exit(</span><span class="s4">0</span><span class="s1">)</span><span class="s0">;</span>
+
+        <span class="s1">System.out.println(</span><span class="s3">&quot;You chose Siem Reap!&quot;</span><span class="s1">)</span><span class="s0">;</span>
+    <span class="s1">}</span>
+
+    <span class="s0">public void </span><span class="s1">adventureBali(){</span>
+        <span class="s2">// Bali storyline</span>
+        <span class="s1">promptMessage.unavailableNotice()</span><span class="s0">;</span>
+        <span class="s1">System.exit(</span><span class="s4">0</span><span class="s1">)</span><span class="s0">;</span>
+
+        <span class="s1">System.out.println(</span><span class="s3">&quot;You chose Bali!&quot;</span><span class="s1">)</span><span class="s0">;</span>
+    <span class="s1">}</span>
+
+<span class="s1">}</span>
+
+</pre>
+</body>
+</html>
